@@ -1,0 +1,69 @@
+---
+ title: "FAQ"
+ output:
+   html_document:
+     highlight: textmate
+     # toc: yes
+     toc_float:
+       collapsed: no
+     theme: null
+     mathjax: null
+---
+
+<hr />
+#### <i> Who has developed the platform? </i>
+Associate Professor Taha Rahsidi and Dr Fatemeh Vafaee with the help of PhD candidate Siroos Shariari and postdoctoral research associate AKM Azad have initiated developing the platform.
+
+<hr />
+#### <i> Are the codes available and can we use them </i>
+Yes, but you need to cite it. The code can be found here in the [GitHub Repository:] (https://github.com/VafaeeLab/COVID19-TS-Forcast)
+
+<hr />
+#### <i> Which countries are included? </i>
+The left window provides a list of all countries having at least 30 days of days with minimum 50 infected cases.
+
+<hr />
+#### <i> What is meant by interventions? </i>
+The platform provides an option for measuring the average impact of previous inventions. These interventions can include lockdowns, step-by-step work from home announcements, shopping centre working hour restrictions, and police enforced social distancing, or complete lockdown. Once several instances of the past interventions are selected in the "Add interventions" calendar, the model treats them being of the same type and measures an average impact of rall of them. The estimated average impact of these interventions can be then used for forecasting where a hypothetical intervention(s) can be considered in the next 10 days.
+
+<hr />
+#### <i> How are interventions entered into the model? </i>
+Click on the calendar icon and select the dates of the past and future interventions. The platform splits the records of intervention into past and future and uses the past intervention in model estimation and future interventions for forecasting.
+
+<hr />
+#### <i> Where is the source of data </i>
+The data is sourced from European Centre for Disease Prevention and Control [(ECDC) online platform] (https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide)
+
+<hr />
+#### <i> How a subset of data can be selected for model estimation? </i>
+The platform allows the user to develop models for a subset of all days for which data is available. This is for two main reasons: 1) the model can change over time and the user may want to develop step-wise models for different parts of the data, 2) predicting the progression of the spread of COVID19 at specific times in the past allows us to understand how effective the preventive strategies were. 
+
+By clicking on the calendar icon on top of the "Predict" button a window will open allowing for selection of the dates for which the model should be estimated. Note that that any interventions outside this time window will be excluded from the model.
+
+<hr />
+#### <i> How often is the dashboard information updated? </i>
+As the input data gets updated, the dashboard also gets updated.
+
+<hr />
+#### <i> What mathematical specifications are included in the backend?  </i>
+The code develops several transformations of the number of infected cases, including log-transformation, root-transformation, and ratio transformation, and then applies differencing on the data so obtain stationary data.  Following this, several ARIMA(p, i, q) models are developed and the best is selected based on an in-sample validation using the RMSE indicator.
+
+<hr />
+#### <i> What does the map show?  </i>
+The map shows the forecast of the number of infected cases in the world using the data provided by ECDC.
+
+<hr />
+#### <i> What is the use of the Top 10 Countries?  </i>
+This graph shows the spread of progression in different countries. 
+
+<hr />
+#### <i> Can I see the estimated parameters?  </i>
+Yes, click on the "Parameters" button and the parameters of the selected model are reported. 
+
+<hr />
+#### <i> Is the platform copyrighted?  </i>
+The website and its contents, including all data, mapping, and analysis, copyright 2020 UNSW, all rights reserved, is provided to the public strictly for educational and academic research purposes.
+
+<hr />
+#### <i> Who can I talk to for more information about the dashboard?  </i>
+For general information contact Dr Fatemeh Vafaee at f.vafaee@unsw.edu.au or A/Prof Taha Rashidi at rashidi@unsw.edu.au .
